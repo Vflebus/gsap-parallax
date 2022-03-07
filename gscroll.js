@@ -10,10 +10,10 @@ gsap.to("#cave", {
         toggleAction: "play reset reset reset",
         start: "top top",
         end: () => "+=" + document.querySelector('.header').offsetHeight/2,
-        scrub: true
+        scrub: true,
     },
     scale: 1.7,
-    x: -700,
+    x: -700
 });
 
 gsap.to("#bas", {
@@ -58,7 +58,6 @@ gsap.to("#neige", {
         end: () => "+=" + document.querySelector('.header').offsetHeight,
         scrub: 2,
         scrub: true,
-        // markers: true,
         onEnterBack: () => {
             gsap.set("#neige", {filter: "unset"})
             gsap.to("#neige", {
@@ -83,7 +82,6 @@ gsap.to("#neige", {
         trigger: ".header",
         start: "top center",
         end: () => "+=" + document.querySelector('.header').offsetHeight,
-        // markers: true
     },
 })
 
@@ -93,8 +91,19 @@ gsap.to(".header", {
         toggleAction: "play reset reset reset",
         pin: true,
         start: "top top",
-        end: () => "+=" + (document.querySelector('.header').offsetHeight+100),
+        end: () => "+=" + (document.querySelector('.header').offsetHeight/2),
         pinSpacing: true,
         scrub: true
+    }
+})
+
+
+gsap.to(".header", {
+    scrollTrigger: {
+        trigger: ".main",
+        start: "top center",
+        end: () => "+=" + document.querySelector('.header').offsetHeight/3,
+        scrub: true
     },
+    opacity: 0
 })

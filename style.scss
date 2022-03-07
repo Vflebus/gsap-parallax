@@ -3,7 +3,7 @@
     src: url(./fonts/THE\ LAST\ KINGDOM.ttf) format("truetype");
 }
 body {
-    background: linear-gradient(skyblue, white);
+    background: #4B3748;
     min-height: 100vh;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -27,6 +27,7 @@ body {
             width: 100vw;
 
             &.header {
+                background: linear-gradient(skyblue, white);
                 height: 100vh;
                 h1{
                     z-index: 100;
@@ -70,6 +71,7 @@ body {
                 background: #4B3748;
                 justify-content: center;
                 align-items: center;
+                // min-height: 100vh;
                 p {
                     margin-top: 10vh;
                     width: 40%;
@@ -77,6 +79,11 @@ body {
                     color: white;
                     text-shadow: 2px 2px 2px #000000;
                     font-size: 2rem;
+                }
+                #campfire{
+                    align-self: flex-start;
+                    mix-blend-mode: screen;
+                    height: 70vh;
                 }
             }
         }

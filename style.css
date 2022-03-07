@@ -2,12 +2,8 @@
   font-family: "kingdom";
   src: url(./fonts/THE\ LAST\ KINGDOM.ttf) format("truetype");
 }
-@font-face {
-  font-family: "immortal";
-  src: url(./fonts/IMMORTAL.ttf) format("truetype");
-}
 body {
-  background: linear-gradient(skyblue, white);
+  background: #4B3748;
   min-height: 100vh;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -29,6 +25,7 @@ body .container section {
   width: 100vw;
 }
 body .container section.header {
+  background: linear-gradient(skyblue, white);
   height: 100vh;
 }
 body .container section.header h1 {
@@ -79,6 +76,11 @@ body .container section.main p {
   color: white;
   text-shadow: 2px 2px 2px #000000;
   font-size: 2rem;
+}
+body .container section.main #campfire {
+  align-self: flex-start;
+  mix-blend-mode: screen;
+  height: 70vh;
 }
 
 /*# sourceMappingURL=style.css.map */
