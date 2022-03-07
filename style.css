@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "kingdom";
+  src: url(./fonts/THE\ LAST\ KINGDOM.ttf) format("truetype");
+}
+@font-face {
+  font-family: "immortal";
+  src: url(./fonts/IMMORTAL.ttf) format("truetype");
+}
+body {
+  background: linear-gradient(skyblue, white);
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body .container #neige {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  transition: all 0.5s linear;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 1000;
+}
+body .container section {
+  display: flex;
+  scroll-snap-align: start;
+  position: relative;
+  width: 100vw;
+}
+body .container section.header {
+  height: 100vh;
+}
+body .container section.header h1 {
+  z-index: 100;
+  font-family: "kingdom", serif;
+  font-size: 10rem;
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  margin-top: 10vh;
+  margin-left: 5vw;
+}
+body .container section.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, #4B3748, transparent);
+  height: 100px;
+  width: 100vw;
+  z-index: 10;
+}
+body .container section.header img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  transition: all 0.5s linear;
+  pointer-events: none;
+}
+body .container section.header #neige {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  transition: all 0.5s linear;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 1000;
+}
+body .container section.main {
+  background: #4B3748;
+  justify-content: center;
+  align-items: center;
+}
+body .container section.main p {
+  margin-top: 10vh;
+  width: 40%;
+  text-align: justify;
+  color: white;
+  text-shadow: 2px 2px 2px #000000;
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

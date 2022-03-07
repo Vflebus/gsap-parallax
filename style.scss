@@ -1,0 +1,84 @@
+@font-face {
+    font-family: "kingdom";
+    src: url(./fonts/THE\ LAST\ KINGDOM.ttf) format("truetype");
+}
+body {
+    background: linear-gradient(skyblue, white);
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    .container{
+        #neige {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100vh;
+            transition: all .5s linear;
+            pointer-events: none;
+            mix-blend-mode: screen;
+            z-index: 1000;
+            // transition: opacity 2s, left 1s, bottom 1s;
+        }
+        section {
+            display: flex;
+            scroll-snap-align: start;
+            position: relative;
+            width: 100vw;
+
+            &.header {
+                height: 100vh;
+                h1{
+                    z-index: 100;
+                    font-family: "kingdom", serif;
+                    font-size: 10rem;
+                    color: white;
+                    text-shadow: 2px 2px 2px #000000;
+                    margin-top: 10vh;
+                    margin-left: 5vw;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    background: linear-gradient(to top, #4B3748, transparent);
+                    height: 100px;
+                    width: 100vw;
+                    z-index: 10;
+                }
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 100vh;
+                    transition: all .5s linear;
+                    pointer-events: none;
+                }
+                #neige {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 100vh;
+                    transition: all .5s linear;
+                    pointer-events: none;
+                    mix-blend-mode: screen;
+                    z-index: 1000;
+                    // transition: opacity 2s, left 1s, bottom 1s;
+                }
+            }
+            &.main {
+                background: #4B3748;
+                justify-content: center;
+                align-items: center;
+                p {
+                    margin-top: 10vh;
+                    width: 40%;
+                    text-align: justify;
+                    color: white;
+                    text-shadow: 2px 2px 2px #000000;
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}
